@@ -1,7 +1,7 @@
 {
     "name": "zrhm7232/jwt",
     "description": "jwt package for generating, validating, invalidating and refreshing",
-    "type": "library",
+    "type": "project",
     "require": {
         "illuminate/cache": "5.6.*",
         "spomky-labs/jose": "^7.0",
@@ -15,5 +15,10 @@
             "name": "Hamed Zarei",
             "email": "hamedzarei.7232@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+      "psr-4": {
+        "Zrhm7232\\Jwt\\": "src/"
+      }
+    }
 }
