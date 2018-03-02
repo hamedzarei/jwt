@@ -67,8 +67,7 @@ class JWT
         );
 
         // We want to sign the following claims
-        $claims = self::createDefaultClaim($tid);
-
+        $claims = self::createDefaultClaim($tid)['claims'];
         $claims = array_merge($claims, $custom_claims);
 
         // We have to create a JWS class using the JWSFactory.
@@ -163,7 +162,7 @@ class JWT
 
         return [
             'status' => true,
-            'claims' => $jws_raw->getClaims()['claims']
+            'claims' => $jws_raw->getClaims()
         ];
     }
 
